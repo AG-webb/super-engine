@@ -158,6 +158,9 @@ header {
 .search-section .search-wrapper .search-container input:not(:first-child), .search-section .search-wrapper .search-container select {
   margin: 0 13px;
 }
+.search-section .search-wrapper .search-container input[type=date], .search-section .search-wrapper .search-container select {
+  height: 40px;
+}
 .search-section .search-wrapper .search-container svg {
   cursor: pointer;
 }
@@ -190,6 +193,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  position: relative;
 }
 .race-section .race-filter-panel .race-filter-container {
   width: 300px;
@@ -202,19 +206,9 @@ header {
   align-items: center;
   flex-wrap: nowrap;
 }
-.race-section .race-filter-panel .race-filter-container a {
+.race-section .race-filter-panel .race-filter-container .race-category {
   padding: 14.5px;
   position: relative;
-}
-.race-section .race-filter-panel .race-filter-container a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: #435DE8;
-  border-radius: 2px;
 }
 .race-section .race-filter-panel .race-filter-container .filter-all {
   color: #435DE8;
@@ -231,10 +225,20 @@ header {
 .race-section .race-filter-panel .race-filter-container .filter-in_process::after {
   background-color: #FFD557;
 }
+.race-section .race-filter-panel .race-filter-container .filter-line {
+  content: "";
+  position: absolute;
+  left: 13px;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #435DE8;
+  border-radius: 2px;
+}
 .race-section .races-container {
   margin-top: 32px;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 280.6px);
   overflow-y: scroll;
   padding: 35px 80px 0;
   background-color: #FFF;
@@ -273,6 +277,7 @@ header {
 }
 .race-section .races-container .races .empty-list {
   display: block;
+  height: 600px;
   color: #EF403D;
   font-size: 20px;
 }
