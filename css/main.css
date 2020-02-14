@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: inherit;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fonts/Montserrat-Regular.otf");
+}
+@font-face {
+  font-family: Montserrat-medium;
+  src: url("../assets/fonts/Montserrat-medium.otf");
+}
+@font-face {
+  font-family: Montserrat-light;
+  src: url("../assets/fonts/Montserrat-Light.otf");
+}
+.search-section .search-wrapper .search-container input[type=date], .search-section .search-wrapper .search-container select {
+  border: 1px solid #BFBFBF;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #BFBFBF;
+  background-color: #FFF;
+}
+
+.race-section .race-filter-panel .add-race-btn, .search-section .search-wrapper .page-filter-btns button {
+  border: 1px solid #EEEEEE;
+  border-radius: 11px;
+  color: black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 13px 25px;
+  cursor: pointer;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.race-section .race-filter-panel .add-race-btn:hover, .search-section .search-wrapper .page-filter-btns button:hover {
+  box-shadow: none;
+}
+
+.search-section .search-wrapper .page-filter-btns button:nth-child(2) {
+  background-color: #435DE8;
+  color: #FFF;
+}
+
+body {
+  font-family: Montserrat;
+  background-color: #d7d8f7;
+}
+
+svg, img {
+  margin: 0 5px;
+}
+
+.container {
+  max-width: 1265px;
+  margin: 0 auto;
+}
+
+header {
+  box-shadow: 0 3px 10px rgba(87, 87, 87, 0.2);
+  background-color: #FFF;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 22.5px 0;
+}
+.nav-bar .nav-item {
+  cursor: pointer;
+  margin-left: 50px;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.nav-bar .nav-item:hover {
+  color: #435DE8;
+}
+.nav-bar .nav-item:hover svg {
+  fill: #435DE8;
+}
+.nav-bar .nav-item-active {
+  color: #435DE8;
+}
+.nav-bar .nav-item-active svg {
+  fill: #435DE8;
+}
+.nav-bar .nav-left-part {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.nav-bar .nav-left-part .logo-container {
+  cursor: pointer;
+}
+.nav-bar .nav-left-part .home {
+  margin-left: 30px;
+}
+.nav-bar .nav-right-part {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.search-section {
+  margin-top: 33px;
+}
+.search-section .search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.search-section .search-wrapper .search-container {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.search-section .search-wrapper .search-container .line {
+  display: inline-block;
+  width: 5px;
+  height: 1px;
+  background-color: #BFBFBF;
+  vertical-align: center;
+}
+.search-section .search-wrapper .search-container .search-input {
+  width: 192px;
+  padding: 10px 17px 10px 0;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.55);
+  background-image: url("../assets/icons/search (1).svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  color: rgba(112, 112, 112, 0.55);
+}
+.search-section .search-wrapper .search-container input:not(:first-child), .search-section .search-wrapper .search-container select {
+  margin: 0 13px;
+}
+.search-section .search-wrapper .search-container svg {
+  cursor: pointer;
+}
+.search-section .search-wrapper .page-filter-btns {
+  width: 368px;
+  border-radius: 11px;
+  background-color: #FFF;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.search-section .search-wrapper .page-filter-btns button {
+  width: 50%;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  padding-right: 12px;
+}
+.search-section .search-wrapper .page-filter-btns:hover {
+  box-shadow: none;
+}
+
+.race-section {
+  margin-top: 45px;
+}
+.race-section .race-filter-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.race-section .race-filter-panel .race-filter-container {
+  width: 300px;
+  background-color: #FFF;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.race-section .race-filter-panel .race-filter-container a {
+  padding: 14.5px;
+  position: relative;
+}
+.race-section .race-filter-panel .race-filter-container a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #435DE8;
+  border-radius: 2px;
+}
+.race-section .race-filter-panel .race-filter-container .filter-all {
+  color: #435DE8;
+}
+.race-section .race-filter-panel .race-filter-container .filter-finished {
+  color: #96DF73;
+}
+.race-section .race-filter-panel .race-filter-container .filter-finished::after {
+  background-color: #96DF73;
+}
+.race-section .race-filter-panel .race-filter-container .filter-in_process {
+  color: #FFD557;
+}
+.race-section .race-filter-panel .race-filter-container .filter-in_process::after {
+  background-color: #FFD557;
+}
+.race-section .races-container {
+  margin-top: 32px;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 35px 80px 0;
+  background-color: #FFF;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.race-section .races-container::-webkit-scrollbar {
+  width: 5px;
+}
+.race-section .races-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.race-section .races-container::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 5px;
+}
+.race-section .races-container::-webkit-scrollbar-thumb:hover {
+  background: #a5a5a5;
+}
+.race-section .races-container .race-category-container .category {
+  cursor: default;
+  font-family: Montserrat-medium;
+  font-size: 14px;
+  opacity: 0.5;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-wrap: nowrap;
+  display: inline-flex;
+}
+.race-section .races-container .race-category-container .category:not(:first-child) {
+  margin-left: 65px;
+}
+.race-section .races-container .races {
+  margin-top: 45px;
+}
+.race-section .races-container .races .empty-list {
+  display: block;
+  color: #EF403D;
+  font-size: 20px;
+}

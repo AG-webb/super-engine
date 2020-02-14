@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+    color: inherit;
+    font-size: 12px;
+}
+*::before ,
+*::after {
+    box-sizing: border-box;
+}
+::placeholder {
+    color: inherit;
+}
+
+// Fonts
+@font-face {
+    font-family: Montserrat;
+    src: url('../assets/fonts/Montserrat-Regular.otf');
+}
+@font-face {
+    font-family: Montserrat-medium;
+    src: url('../assets/fonts/Montserrat-medium.otf');
+}
+@font-face {
+    font-family: Montserrat-light;
+    src: url('../assets/fonts/Montserrat-Light.otf');
+}

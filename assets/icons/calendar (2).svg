@@ -1,0 +1,16 @@
+<svg id="calendar_2_" data-name="calendar (2)" xmlns="http://www.w3.org/2000/svg" width="12.78" height="12.78" viewBox="0 0 12.78 12.78">
+  <g id="Group_44" data-name="Group 44">
+    <g id="Group_43" data-name="Group 43">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="0.5" cy="0.5" r="0.5" transform="translate(8.901 4.084)" fill="#00000"/>
+      <path id="Path_41" data-name="Path 41" d="M10.783,1h-.649V.5a.5.5,0,1,0-1,0V1H6.864V.5a.5.5,0,1,0-1,0V1H3.619V.5a.5.5,0,1,0-1,0V1H2A2,2,0,0,0,0,3v7.788a2,2,0,0,0,2,2H5.816a.5.5,0,0,0,0-1H2a1,1,0,0,1-1-1V3A1,1,0,0,1,2,2h.624v.5a.5.5,0,0,0,1,0V2H5.866v.5a.5.5,0,1,0,1,0V2H9.136v.5a.5.5,0,1,0,1,0V2h.649a1,1,0,0,1,1,1V5.841a.5.5,0,0,0,1,0V3A2,2,0,0,0,10.783,1Z" fill="#00000"/>
+      <path id="Path_42" data-name="Path 42" d="M272.548,270a2.548,2.548,0,1,0,2.548,2.548A2.551,2.551,0,0,0,272.548,270Zm0,4.254a1.706,1.706,0,1,1,1.706-1.706A1.708,1.708,0,0,1,272.548,274.254Z" transform="translate(-262.316 -262.316)" fill="#00000"/>
+      <path id="Path_43" data-name="Path 43" d="M372.032,330.863h-.19v-.442a.421.421,0,0,0-.842,0v.863a.421.421,0,0,0,.421.421h.611a.421.421,0,0,0,0-.842Z" transform="translate(-361.189 -321.521)" fill="#00000"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="0.5" cy="0.5" r="0.5" transform="translate(5.288 6.492)" fill="#00000"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="0.5" cy="0.5" r="0.5" transform="translate(2.879 4.084)" fill="#00000"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="0.5" cy="0.5" r="0.5" transform="translate(2.879 6.492)" fill="#00000"/>
+      <circle id="Ellipse_6" data-name="Ellipse 6" cx="0.5" cy="0.5" r="0.5" transform="translate(2.879 8.901)" fill="#00000"/>
+      <circle id="Ellipse_7" data-name="Ellipse 7" cx="0.5" cy="0.5" r="0.5" transform="translate(5.288 8.901)" fill="#00000"/>
+      <circle id="Ellipse_8" data-name="Ellipse 8" cx="0.5" cy="0.5" r="0.5" transform="translate(5.288 4.084)" fill="#00000"/>
+    </g>
+  </g>
+</svg>

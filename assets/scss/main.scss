@@ -1,0 +1,263 @@
+@import 'reset';
+
+// Variables
+//Colors
+$main-color-blue: #435DE8;
+$main-color-smoke: #BFBFBF;
+$main-color-dark: #707070;
+$main-color-dark-alpha: rgba(112, 112, 112, 0.55);
+$main-bg-color: rgb(215, 216, 247);
+$success: #96DF73;
+$error: #EF403D;
+$warning: #FFD557;
+//Font size
+$main-fs-medium: 14px;
+$main-fs-big: 16px;
+//Buttons
+$white-btn-size: 130px;
+$small-btn-height: 32px;
+$big-btn-height: 37px;
+$blue-btn-size: 148px;
+
+// Extends
+%main-inputs {
+    border: 1px solid $main-color-smoke;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: $main-color-smoke;
+    background-color: #FFF;
+}
+
+%main-btns {
+    border: 1px solid #EEEEEE;
+    border-radius: 11px;
+    color: black;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 13px 25px;
+    cursor: pointer;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+%main-btn-blue {
+    background-color: $main-color-blue;
+    color: #FFF;
+}
+
+%main-btn-disabled {
+    background-color: $main-color-smoke;
+    color: #FFF;
+}
+
+// Mixins
+@mixin flex($justify-content, $align-items, $wrap) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $wrap;
+}
+
+// ========================================>
+
+// CSS
+body {
+    font-family: Montserrat;
+    background-color: $main-bg-color;
+}
+svg, img {
+    margin: 0 5px;
+}
+.container {
+    max-width: 1265px;
+    margin: 0 auto;
+}
+header {
+    box-shadow: 0 3px 10px rgba(87, 87, 87, 0.2);
+    background-color: #FFF;
+}
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 22.5px 0;
+    .nav-item {
+        cursor: pointer;
+        margin-left: 50px;
+        @include flex(unset, center, nowrap);
+        &:hover  {
+            color: $main-color-blue;
+            svg {
+                fill: $main-color-blue;
+            }
+        }
+    }
+    .nav-item-active {
+        color: $main-color-blue;
+        svg {
+            fill: $main-color-blue;
+        }
+    }
+    .nav-left-part {
+        @include flex(unset, center, nowrap);
+        .logo-container {
+            cursor: pointer;
+        }
+        .home {
+            margin-left: 30px;
+        }
+    }
+    .nav-right-part {
+        @include flex(unset, center, nowrap);
+    }
+}
+.search-section {
+    margin-top: 33px;
+    .search-wrapper {
+        @include flex(space-between, center, nowrap);
+        .search-container {
+            @include flex(unset, center, nowrap);
+            .line {
+                display: inline-block;
+                width: 5px;
+                height: 1px;
+                background-color: $main-color-smoke;
+                vertical-align: center;
+                // margin-left: 25px;
+            }
+            .search-input {
+                width: 192px;
+                padding: 10px 17px 10px 0;
+                background-color: transparent;
+                border-bottom: 1px solid $main-color-dark-alpha;
+                background-image: url('../assets/icons/search (1).svg');
+                background-repeat: no-repeat;
+                background-position: right center;
+                color: $main-color-dark-alpha;
+            }
+            input:not(:first-child), select {
+                margin: 0 13px;
+            }
+            input[type=date], select {
+                @extend %main-inputs;
+            }
+            svg {
+                cursor: pointer;
+            }
+        }
+        .page-filter-btns {
+            width: 368px;
+            border-radius: 11px;
+            background-color: #FFF;
+            @include flex(unset, center, nowrap);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            button {
+                @extend %main-btns;
+                width: 50%;
+                box-shadow: none;
+                border: none;
+                cursor: pointer;
+                padding-right: 12px;
+                &:nth-child(2) {
+                    @extend %main-btn-blue;
+                }
+            }
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+}
+.race-section {
+    margin-top: 45px;
+    .race-filter-panel {
+        @include flex(space-between, center, nowrap);
+        .race-filter-container {
+            width: 300px;
+            background-color: #FFF;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom: 2px solid rgba(128, 128, 128, 0.5);
+            @include flex(space-around, center, nowrap);
+            a {
+                padding: 14.5px;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $main-color-blue;
+                    border-radius: 2px;
+                }
+            }
+            .filter-all {
+                color: $main-color-blue;
+            }
+            .filter-finished {
+                color: $success;
+                &::after {
+                    background-color: $success;
+                }
+            }
+            .filter-in_process {
+                color: $warning;
+                &::after {
+                    background-color: $warning;
+                }
+            }
+        }
+        .add-race-btn {
+            @extend %main-btns;
+        }
+    }
+    .races-container {
+        margin-top: 32px;
+        width: 100%;
+        height: 100vh ;
+        overflow-y: scroll;
+        padding: 35px 80px 0;
+        background-color: #FFF;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        &::-webkit-scrollbar {
+            width: 5px;
+            &-track {
+                background: #f1f1f1;  
+            }
+            &-thumb {
+                background: rgb(207, 207, 207); 
+                border-radius: 5px;
+                &:hover {
+                    background: rgb(165, 165, 165); 
+                }
+              }
+        }
+        .race-category-container {
+            .category {
+                cursor: default;
+                font-family: Montserrat-medium;
+                font-size: $main-fs-medium;
+                opacity: 0.5;
+                &:not(:first-child) {
+                    margin-left: 65px;
+                }
+                @include flex(unset, center, nowrap);
+                display: inline-flex;
+            }
+        }
+        .races {
+            margin-top: 45px;
+            .empty-list {
+                display: block;
+                color: $error;
+                font-size: 20px;
+            }
+        }
+    }
+}
