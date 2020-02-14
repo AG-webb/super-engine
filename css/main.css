@@ -39,7 +39,7 @@
   background-color: #FFF;
 }
 
-.race-section .race-filter-panel .add-race-btn, .search-section .search-wrapper .page-filter-btns button {
+.race-section .race-filter-panel .add-race-btn, .search-section .search-wrapper .page-filter-btns a {
   border: 1px solid #EEEEEE;
   border-radius: 11px;
   color: black;
@@ -51,11 +51,11 @@
   justify-content: space-around;
   align-items: center;
 }
-.race-section .race-filter-panel .add-race-btn:hover, .search-section .search-wrapper .page-filter-btns button:hover {
+.race-section .race-filter-panel .add-race-btn:hover, .search-section .search-wrapper .page-filter-btns a:hover {
   box-shadow: none;
 }
 
-.search-section .search-wrapper .page-filter-btns button:nth-child(2) {
+.search-section .search-wrapper .page-filter-btns a:nth-child(2) {
   background-color: #435DE8;
   color: #FFF;
 }
@@ -174,7 +174,7 @@ header {
   flex-wrap: nowrap;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
-.search-section .search-wrapper .page-filter-btns button {
+.search-section .search-wrapper .page-filter-btns a {
   width: 50%;
   box-shadow: none;
   border: none;
